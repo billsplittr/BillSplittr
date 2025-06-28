@@ -1,16 +1,46 @@
-# Bill Splitter
+# 📲 BillSplitter
 
-A new Flutter project.
+BillSplitter is a mobile-first application that makes splitting group bills easy by allowing users to upload a photo of a bill or manually add expenses. It aims to provide a seamless and intuitive experience for managing group expenses.
 
-## Getting Started
+---
+## 📁 Folder Structure
 
-This project is a starting point for a Flutter application.
+- `backend/` — Backend APIs and logic (e.g., Express/FastAPI)  
+  - `README.md` — Backend setup, routes, and architecture
 
-A few resources to get you started if this is your first Flutter project:
+- `frontend/` — React Native mobile app  
+  - `README.md` — UI components, screen structure, setup guide
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+- `data/` — Sample bills, test data, or receipts  
+  - `README.md` — Explanation of data usage and format
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+- `.gitignore` — Files and folders to ignore in version control  
+- `README.md` — Project overview, structure, and contribution guide  
+- `LICENSE` — Project license file  
+- `CONTRIBUTING.md` — Contribution standards and process  
+
+---
+
+## 🧠 Workflow & Task Management
+
+We use **GitHub Issues** to manage all tasks and ideas. Each issue should follow a clear format and be linked to a specific part of the project (e.g., frontend, backend, data).
+
+## ✅ Contribution Guidelines
+
+Please check out the [CONTRIBUTING.md](https://github.com/Aryan-Gupta/bill_splitter/blob/main/CONTRIBUTING.md) file for guidelines on how to contribute to the project.
+
+## ✍️ Folder-Specific READMEs
+
+Each folder has its own `README.md` file containing:
+- A breakdown of its purpose
+- Setup instructions
+- Design/architecture choices
+- Owner or lead contact (if applicable)
+
+
+## 🚧 Ongoing
+
+Check the open issues tab for what's being worked on.
+
+- [Issues](https://github.com/Aryan-Gupta/bill_splitter/issues)
+- [Google Docs Spec](https://docs.google.com/document/d/1Sya6-k5UFL5TWITQur_gpLg-Jrsme6yOe-_U8_H6qig/edit?tab=t.0)
