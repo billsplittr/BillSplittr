@@ -5,21 +5,21 @@ BillSplitter is a mobile-first application that makes splitting group bills easy
 ---
 ## 📁 Folder Structure
 
-- `backend/` — Backend APIs and logic (e.g., Express/FastAPI)  
-  - `README.md` — Backend setup, routes, and architecture
-
-- `frontend/` — React Native mobile app  
-  - `README.md` — UI components, screen structure, setup guide
-
-- `data/` — Sample bills, test data, or receipts  
-  - `README.md` — Explanation of data usage and format
-
-- `.gitignore` — Files and folders to ignore in version control  
-- `README.md` — Project overview, structure, and contribution guide  
-- `LICENSE` — Project license file  
-- `CONTRIBUTING.md` — Contribution standards and process  
-
----
+```
+├── backend/ # Backend APIs and logic
+│ └── README.md # Backend setup, routes, and architecture
+│
+├── frontend/ # React Native mobile app
+│ └── README.md # UI components, screen structure, setup guide
+│
+├── data/ # Sample bills, test data, or receipts
+│ └── README.md # Explanation of data usage and format
+│
+├── .gitignore
+├── README.md # Project overview and structure
+├── LICENSE # Project license file
+├── CONTRIBUTING.md #Contribution standards and process
+```
 
 ## 🧠 Workflow & Task Management
 
