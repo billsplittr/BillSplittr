@@ -30,6 +30,3 @@
 *Reference any relevant issues or discussions:*
 Fixes #\[issue\_number] | Closes #\[issue\_number]
 
----
-
-Let me know if you want a shorter version or one customized for your stack (e.g., React Native, FastAPI, etc.).
