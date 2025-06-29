@@ -3,7 +3,6 @@ name: MegaLinter
 on:
   push:
     branches: ["**"]   # Lint on all branch pushes
-  pull_request:        # Also run on pull requests
   workflow_dispatch:   # Allows manual trigger
 
 jobs:
