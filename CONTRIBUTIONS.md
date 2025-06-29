@@ -1,4 +1,4 @@
-# Contributing to BillSplitter
+# Contributing to BillSplittr
 
 To keep things organized, please follow these steps:
 

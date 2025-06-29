@@ -1,6 +1,6 @@
-# 📲 BillSplitter
+# 📲 BillSplittr
 
-BillSplitter is a mobile-first application that makes splitting group bills easy by allowing users to upload a photo of a bill or manually add expenses. It aims to provide a seamless and intuitive experience for managing group expenses.
+BillSplittr is a mobile-first application that makes splitting group bills easy by allowing users to upload a photo of a bill or manually add expenses. It aims to provide a seamless and intuitive experience for managing group expenses.
 
 ---
 ## 📁 Folder Structure

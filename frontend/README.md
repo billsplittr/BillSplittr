@@ -1,4 +1,4 @@
-# 📲 BillSplitter — Frontend
+# 📲 BillSplittr — Frontend
 
 
 ## 🚀 Getting Started
