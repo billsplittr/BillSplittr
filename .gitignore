@@ -3,41 +3,102 @@
 *.log
 *.pyc
 *.swp
-.DS_Store
 .atom/
 .buildlog/
 .history
 .svn/
 migrate_working_dir/
 
-# IntelliJ related
+# virtual environments (common names)
+.venv
+env
+myenv
+venv
+
+# IntelliJ  and VSCode related
 *.iml
 *.ipr
 *.iws
 .idea/
+.vscode/
 
-# The .vscode folder contains launch configuration and tasks you configure in
-# VS Code which you may wish to be included in version control, so this line
-# is commented out by default.
-#.vscode/
+# ============================ START Frontend ============================
+# macOS
+.DS_Store
 
-# Flutter/Dart/Pub related
-**/doc/api/
-**/ios/Flutter/.last_build_id
-.dart_tool/
-.flutter-plugins
-.flutter-plugins-dependencies
-.pub-cache/
-.pub/
-/build/
+# node.js
+node_modules/
+npm-debug.log*
+yarn-error.log*
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/sdks
+!.yarn/versions
 
-# Symbolication related
-app.*.symbols
+# React Native bundle artifacts
+*.jsbundle
+.bundle/
 
-# Obfuscation related
-app.*.map.json
+# Metro bundler
+.metro-health-check*
 
-# Android Studio will place build artifacts here
-/android/app/debug
-/android/app/profile
-/android/app/release
+# TypeScript
+*.tsbuildinfo
+
+# Coverage reports
+coverage/
+
+# Android
+frontend/android/.gradle/
+frontend/android/.cxx/
+frontend/android/build/
+frontend/android/local.properties
+frontend/android/*.keystore
+frontend/android/*.iml
+
+# iOS
+frontend/ios/Pods/
+frontend/ios/build/
+frontend/ios/DerivedData/
+frontend/ios/*.hmap
+frontend/ios/*.ipa
+frontend/ios/*.xcuserstate
+frontend/ios/*.xccheckout
+frontend/ios/*.pbxuser
+frontend/ios/*.mode1v3
+frontend/ios/*.mode2v3
+frontend/ios/*.perspectivev3
+frontend/ios/xcuserdata/
+frontend/ios/*.moved-aside
+frontend/ios/.xcode.env.local
+
+# Xcode project files
+*.xcworkspace
+*.xcodeproj/project.xcworkspace/
+*.xcodeproj/xcuserdata/
+*.xcodeproj/*.xcuserstate
+
+# IntelliJ / Android Studio
+frontend/.idea/
+frontend/*.iml
+
+# CocoaPods
+/vendor/bundle/
+
+# fastlane
+**/fastlane/report.xml
+**/fastlane/Preview.html
+**/fastlane/screenshots/
+**/fastlane/test_output/
+
+# Testing
+frontend/__tests__/
+jest.config.js
+
+# Others
+frontend/.watchmanconfig
+frontend/.bundle/
+
+# ============================= END Frontend =============================

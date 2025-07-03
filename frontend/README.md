@@ -1,7 +1,11 @@
-# 📲 BillSplittr — Frontend
 
+# 📲 BillSplittr — Frontend (React Native)
 
-## 🚀 Getting Started
+This is the mobile frontend for **BillSplittr** is built using [**React Native**](https://reactnative.dev). It follows a modular folder structure and uses **Expo** for local development.
+
+---
+
+## I. 🚀 Getting Started
 
 ### 1. Install Dependencies
 
@@ -9,53 +13,103 @@
 cd frontend
 npm install
 ```
+
 ### 2. Start the App (Expo)
+
 ```bash
 npx expo start
 ```
-- Scan the QR code in the terminal with the Expo Go app on your device.
 
-- You can also run it on an emulator via Expo Dev Tools.
+* Scan the QR code in the terminal with the **Expo Go** app on your phone.
+* Or use an Android/iOS emulator via the **Expo Dev Tools** in your browser.
 
 ### 3. Folder Structure
-This is just a proposal, subject to change as the project evolves.
+
 ```
 frontend/
-├── assets/         # Static files (images, icons, etc.)
+├── assets/         # Static files (images, icons, fonts, etc.)
 ├── components/     # Reusable UI components
 ├── screens/        # App screens (Home, Upload, Group, etc.)
 ├── api/            # Axios config and API service functions
 ├── utils/          # Helper functions and constants
 ├── App.tsx         # Main entry point
+├── index.js        # Root registration file
 ```
 
-### 4. Linting and Formatting
+> This structure *might* evolve as features grow.
 
-We use ESLint and Prettier for consistent code style.
+---
 
-To run the linter:
-```bash
-npm run lint
-npm run format
-```
+### 4. 🧪 Testing
 
-- All code must be linted before being committed. Unlinted PRs may be rejected.
-- (Optional) Add a pre-commit hook to enforce linting
-
-### 5. Testing
 We will use:
-- Jest for unit testing
-- React Native Testing Library for component tests
 
-Tests will be added once screen/component structure stabilizes.
+* [`Jest`](https://jestjs.io/) for unit tests
+* [`React Native Testing Library`](https://testing-library.com/docs/react-native-testing-library/intro/) for component testing
 
-### 5. Merging & Branching Guidelines
-- Every feature or fix must be in its own branch `(issue-number/feature-name)`
+> Testing will be integrated once the screen/component structure stabilizes.
 
-- Open a Pull Request to main
+---
 
-- Reference the related issue (Closes #issue-number)
+### 5. ✨ Linting & Formatting
 
-    - Include a brief summary and screenshots if UI-related
+We use **ESLint** and **Prettier** to ensure consistent code quality and formatting.
 
-    - Ensure code is linted and tested (if applicable)
+To run:
+
+```bash
+npm run lint     # Run linter
+npm run format   # Format code
+```
+
+#### ⚠️ Linting Requirements
+
+* All code must pass linting before PRs are merged.
+* (Optional) Add a pre-commit hook using Husky to auto-run linting.
+
+### 6. 🧩 Merging & Branching Guidelines
+
+* Follow feature-based branches: `feature/<name>`, `bugfix/<name>`, etc.
+* PRs should include:
+
+  * Brief summary of changes
+  * Screenshots for UI changes (if applicable)
+  * Linted, formatted, and (eventually) tested code
+* See [CONTRIBUTIONS.md](../CONTRIBUTIONS.md) for more details
+
+---
+
+
+## II. 📱 Building for Native Platforms (Optional)
+
+If you are running outside of Expo or want to build for production:
+
+### Android
+
+```bash
+npm run android
+# or
+npx react-native run-android
+```
+
+### iOS
+
+```bash
+bundle install          # Only needed once (if CocoaPods not installed)
+bundle exec pod install # Every time native deps change
+npm run ios
+# or
+npx react-native run-ios
+```
+
+> You can also build using Android Studio or Xcode.
+
+
+## III. 🔁 Fast Refresh
+
+* Any changes to `App.tsx` or components will auto-refresh in the app.
+* If stuck, you can fully reload the app:
+
+  * Android: press <kbd>R</kbd> twice in terminal
+  * iOS: press <kbd>Cmd ⌘</kbd> + <kbd>R</kbd> in Simulator
+
