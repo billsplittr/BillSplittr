@@ -1,7 +1,6 @@
-
 # 📲 BillSplittr — Frontend (React Native)
 
-This is the mobile frontend for **BillSplittr** is built using [**React Native**](https://reactnative.dev). It follows a modular folder structure and uses **Expo** for local development.
+This is the mobile frontend for **BillSplittr** built using [**React Native**](https://reactnative.dev) with [**Expo**](https://expo.dev) for streamlined development and deployment.
 
 ---
 
@@ -14,14 +13,15 @@ cd frontend
 npm install
 ```
 
-### 2. Start the App (Expo)
+### 2. Start the Development Server
 
 ```bash
 npx expo start
 ```
 
-* Scan the QR code in the terminal with the **Expo Go** app on your phone.
-* Or use an Android/iOS emulator via the **Expo Dev Tools** in your browser.
+* Scan the QR code in the terminal with the **Expo Go** app on your phone
+* Or press `a` for Android emulator, `i` for iOS simulator
+* Or open the **Expo Dev Tools** in your browser for additional options
 
 ### 3. Folder Structure
 
@@ -33,14 +33,15 @@ frontend/
 ├── api/            # Axios config and API service functions
 ├── utils/          # Helper functions and constants
 ├── App.tsx         # Main entry point
-├── index.js        # Root registration file
+├── app.json        # Expo configuration
+├── package.json    # Dependencies and scripts
 ```
 
 > This structure *might* evolve as features grow.
 
 ---
 
-### 4. 🧪 Testing
+## II. 🧪 Testing
 
 We will use:
 
@@ -51,7 +52,7 @@ We will use:
 
 ---
 
-### 5. ✨ Linting & Formatting
+## III. ✨ Linting & Formatting
 
 We use **ESLint** and **Prettier** to ensure consistent code quality and formatting.
 
@@ -64,14 +65,14 @@ npm run format   # Format code
 
 #### ⚠️ Linting Requirements
 
-* All code must pass linting before PRs are merged.
-* (Optional) Add a pre-commit hook using Husky to auto-run linting.
+* All code must pass linting before PRs are merged
+* (Optional) Add a pre-commit hook using Husky to auto-run linting
 
-### 6. 🧩 Merging & Branching Guidelines
+---
 
-* Follow feature-based branches: `feature/<name>`, `bugfix/<name>`, etc.
+## IV. 🧩 Merging & Branching Guidelines
+
 * PRs should include:
-
   * Brief summary of changes
   * Screenshots for UI changes (if applicable)
   * Linted, formatted, and (eventually) tested code
@@ -79,37 +80,66 @@ npm run format   # Format code
 
 ---
 
+## V. 🔄 Development Tips
 
-## II. 📱 Building for Native Platforms (Optional)
+### Hot Reload & Fast Refresh
 
-If you are running outside of Expo or want to build for production:
+* Any changes to `App.tsx` or components will auto-refresh in the app
+* If you encounter issues, you can reload the app:
+  * Press `r` in the terminal to reload
+  * Or shake your device and tap "Reload" in the developer menu
 
-### Android
+### Expo Go vs Development Build
+
+* **Expo Go**: Perfect for development with most standard React Native and Expo SDK features
+* **Development Build**: Required if you need custom native code or third-party libraries with native dependencies
+
+### Environment Variables
+
+* Use `.env` files for environment-specific configurations
+* Access them via `process.env.EXPO_PUBLIC_API_URL` (prefix with `EXPO_PUBLIC_` for client-side access)
+
+---
+
+## VI. 📦 Building & Deployment
+
+### Preview Builds
 
 ```bash
-npm run android
-# or
-npx react-native run-android
+# Build for internal distribution
+npx expo build:android --type apk
+npx expo build:ios --type simulator
 ```
 
-### iOS
+### Production Builds
 
 ```bash
-bundle install          # Only needed once (if CocoaPods not installed)
-bundle exec pod install # Every time native deps change
-npm run ios
-# or
-npx react-native run-ios
+# Submit to app stores
+npx expo submit --platform android
+npx expo submit --platform ios
 ```
 
-> You can also build using Android Studio or Xcode.
+### Over-the-Air Updates
 
+```bash
+# Push updates without app store review
+npx expo publish
+```
 
-## III. 🔁 Fast Refresh
+> Expo handles the complexity of native builds, code signing, and deployment for you.
 
-* Any changes to `App.tsx` or components will auto-refresh in the app.
-* If stuck, you can fully reload the app:
+---
 
-  * Android: press <kbd>R</kbd> twice in terminal
-  * iOS: press <kbd>Cmd ⌘</kbd> + <kbd>R</kbd> in Simulator
+## VII. 🛠️ Troubleshooting
 
+### Common Issues
+
+* **Metro bundler cache**: Clear with `npx expo start --clear`
+* **Node modules**: Delete `node_modules` and run `npm install`
+* **Expo cache**: Clear with `npx expo install --fix`
+
+### Debugging
+
+* Use **Flipper** for advanced debugging
+* Enable **Remote JS Debugging** in the developer menu
+* Use **React Native Debugger** for component inspection

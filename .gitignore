@@ -23,82 +23,41 @@ venv
 .vscode/
 
 # ============================ START Frontend ============================
+# Learn more https://docs.github.com/en/get-started/getting-started-with-git/ignoring-files
+
+# dependencies
+frontend/node_modules/
+
+# Expo
+frontend/.expo/
+frontend/dist/
+frontend/web-build/
+frontend/expo-env.d.ts
+
+# Native
+frontend/.kotlin/
+*.orig.*
+*.jks
+*.p8
+*.p12
+*.key
+*.mobileprovision
+
+# Metro
+frontend/.metro-health-check*
+
+# debug
+npm-debug.*
+yarn-debug.*
+yarn-error.*
+
 # macOS
-.DS_Store
+*.DS_Store
+*.pem
 
-# node.js
-node_modules/
-npm-debug.log*
-yarn-error.log*
-.yarn/*
-!.yarn/patches
-!.yarn/plugins
-!.yarn/releases
-!.yarn/sdks
-!.yarn/versions
+# local env files
+.env*.local
 
-# React Native bundle artifacts
-*.jsbundle
-.bundle/
-
-# Metro bundler
-.metro-health-check*
-
-# TypeScript
+# typescript
 *.tsbuildinfo
-
-# Coverage reports
-coverage/
-
-# Android
-frontend/android/.gradle/
-frontend/android/.cxx/
-frontend/android/build/
-frontend/android/local.properties
-frontend/android/*.keystore
-frontend/android/*.iml
-
-# iOS
-frontend/ios/Pods/
-frontend/ios/build/
-frontend/ios/DerivedData/
-frontend/ios/*.hmap
-frontend/ios/*.ipa
-frontend/ios/*.xcuserstate
-frontend/ios/*.xccheckout
-frontend/ios/*.pbxuser
-frontend/ios/*.mode1v3
-frontend/ios/*.mode2v3
-frontend/ios/*.perspectivev3
-frontend/ios/xcuserdata/
-frontend/ios/*.moved-aside
-frontend/ios/.xcode.env.local
-
-# Xcode project files
-*.xcworkspace
-*.xcodeproj/project.xcworkspace/
-*.xcodeproj/xcuserdata/
-*.xcodeproj/*.xcuserstate
-
-# IntelliJ / Android Studio
-frontend/.idea/
-frontend/*.iml
-
-# CocoaPods
-/vendor/bundle/
-
-# fastlane
-**/fastlane/report.xml
-**/fastlane/Preview.html
-**/fastlane/screenshots/
-**/fastlane/test_output/
-
-# Testing
-frontend/__tests__/
-jest.config.js
-
-# Others
-frontend/.watchmanconfig
-frontend/.bundle/
-
 # ============================= END Frontend =============================
