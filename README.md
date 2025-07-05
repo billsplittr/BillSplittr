@@ -27,7 +27,7 @@ We use **GitHub Issues** to manage all tasks and ideas. Each issue should follow
 
 ## ✅ Contribution Guidelines
 
-Please check out the [CONTRIBUTING.md](https://github.com/Aryan-Gupta/bill_splitter/blob/main/CONTRIBUTING.md) file for guidelines on how to contribute to the project.
+Please check out the [CONTRIBUTING.md](https://github.com/billsplittr/BillSplittr/blob/main/CONTRIBUTIONS.md) file for guidelines on how to contribute to the project.
 
 ## ✍️ Folder-Specific READMEs
 
@@ -42,5 +42,5 @@ Each folder has its own `README.md` file containing:
 
 Check the open issues tab for what's being worked on.
 
-- [Issues](https://github.com/Aryan-Gupta/bill_splitter/issues)
-- [Google Docs Spec](https://docs.google.com/document/d/1Sya6-k5UFL5TWITQur_gpLg-Jrsme6yOe-_U8_H6qig/edit?tab=t.0)
+- [Issues](https://github.com/billsplittr/BillSplittr/issues)
+- [Notion](https://www.notion.so/Bill-Splitter-Root-221536d1cb658058af51c19e45783c5c)

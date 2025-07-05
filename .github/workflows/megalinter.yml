@@ -1,0 +1,40 @@
+name: MegaLinter
+
+on:
+  push:
+    branches: ["**"]   # Lint on all branch pushes
+  workflow_dispatch:   # Allows manual trigger
+
+jobs:
+  megalinter:
+    name: MegaLinter
+    runs-on: ubuntu-latest
+
+    steps:
+      # Checkout the repository code
+      - name: Checkout Code
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          fetch-depth: 0 # Full git history for better analysis
+
+      # Run MegaLinter
+      - name: MegaLinter
+        uses: oxsecurity/megalinter@v7
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          # Enable specific linters for your stack
+          ENABLE_LINTERS: JAVASCRIPT_ES,TYPESCRIPT_ES,PYTHON_PYLINT,PYTHON_BLACK,PYTHON_FLAKE8,SQL_SQLFLUFF,DART_ANALYZER
+          # Report configuration
+          REPORT_OUTPUT_FOLDER: megalinter-reports
+          UPLOAD_TO_GITHUB: true
+
+      # Upload MegaLinter artifacts
+      - name: Archive production artifacts
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: MegaLinter reports
+          path: |
+            megalinter-reports/
+            mega-linter.log

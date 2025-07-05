@@ -1,0 +1,11 @@
+# Global reviewers for everything
+/*.* @apramm @aryanballani @kashish1928 @VivaanWadhwa
+
+# Backend code
+backend/ @VivaanWadhwa
+
+# Frontend code
+frontend/ @aryanballani
+
+# Data code
+data/ @kashish1928
